@@ -11,7 +11,7 @@ import Foundation
 
 
 
-struct GPSReader {
+public struct GPSReader {
     
 func getCoordinates(_ data:Data)->(lat:CGFloat?,long:CGFloat?) {
         
