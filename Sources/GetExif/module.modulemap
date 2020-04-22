@@ -6,6 +6,6 @@ module GetExif [system] {
 
 module GetExifLinux [system] {
   header "shimlinux.h"
-  link "libexif-dev"
+  link "libexif"
   export *
 }
