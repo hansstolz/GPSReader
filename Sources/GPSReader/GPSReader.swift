@@ -13,7 +13,9 @@ import Foundation
 
 public struct GPSReader {
     
-func getCoordinates(_ data:Data)->(lat:CGFloat?,long:CGFloat?) {
+    public init() {}
+    
+public func getCoordinates(_ data:Data)->(lat:CGFloat?,long:CGFloat?) {
         
     let exifData = exif_data_new_from_data([UInt8](data), UInt32(data.count))
     
