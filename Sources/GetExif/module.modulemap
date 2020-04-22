@@ -1,0 +1,11 @@
+module GetExif [system] {
+  header "shim.h"
+  link "libexif"
+  export *
+}
+
+module GetExifLinux [system] {
+  header "shimlinux.h"
+  link "libexif"
+  export *
+}
