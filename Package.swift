@@ -22,7 +22,8 @@ let package = Package(
         .target(
             name: "GPSReader",
             dependencies: ["GetExif"]),
-        .systemLibrary(name: "GetExif", pkgConfig: "GetExif", providers: [.apt(["libexif-dev"]), .brew(["libexif"])]),
+        .systemLibrary(name: "GetExif", pkgConfig: "libexif",
+                       providers: [.apt(["libexif-dev"]), .brew(["libexif"])]),
         .testTarget(
             name: "GPSReaderTests",
             dependencies: ["GPSReader"]),
