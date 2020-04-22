@@ -1,9 +1,7 @@
 #if canImport(Darwin)
 import Darwin
-import GetExif
 #else
 import Glibc
-import GetExifLinux
 #endif
 
 import Foundation
