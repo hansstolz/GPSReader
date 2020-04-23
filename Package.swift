@@ -21,9 +21,12 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "GPSReader",
-            dependencies: ["GetExif"]),
+            dependencies: ["GetExif","GetExifLinux"]),
         .systemLibrary(name: "GetExif", pkgConfig: "libexif",
-                       providers: [.apt(["libexif-dev"]), .brew(["libexif"])]),
+                       providers: [ .brew(["libexif"])]),
+        
+        .systemLibrary(name: "GetExifLinux", pkgConfig: "libexif-dev",
+        providers: [.apt(["libexif-dev"])]),
         .testTarget(
             name: "GPSReaderTests",
             dependencies: ["GPSReader"]),

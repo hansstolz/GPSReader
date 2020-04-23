@@ -4,8 +4,3 @@ module GetExif [system] {
   export *
 }
 
-module GetExifLinux [system] {
-  header "shimlinux.h"
-  link "libexif"
-  export *
-}
